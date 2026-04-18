@@ -29,6 +29,8 @@ bodega/
 │   └── edit.php         # Formulario editar bodega (CRUD - Update)
 ├── public/
 │   └── index.php        # Entry point: ruteo de acciones
+│   └── css/
+│     └───styles.css
 ├── docs/
 │   └── Bodega-db_schema.pdf  # Diagrama ER de la base de datos
 ├── .env                 # Configuración de conexión (NO incluir en git)
