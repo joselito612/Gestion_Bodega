@@ -17,8 +17,7 @@ bodega/
 ├── config/
 │   └── db.php           # Conexión a PostgreSQL usando PDO
 ├── database/
-│   ├── schema.sql       # Definición de tablas y constraints
-│   └── seed.sql         # Datos de prueba (encargados)
+│   ├── dump.sql       # Definición de tablas y constraints + Datos de prueba (encargados)
 ├── models/
 │   └── Bodega.php       # Modelo: consultas a la base de datos
 ├── controllers/
@@ -33,7 +32,6 @@ bodega/
 │     └───styles.css
 ├── docs/
 │   └── Bodega-db_schema.pdf  # Diagrama ER de la base de datos
-├── .env                 # Configuración de conexión (NO incluir en git)
 ├── .env.example         # Plantilla de configuración
 └── README.md           # Este archivo
 ```
@@ -51,10 +49,9 @@ Crear la base de datos y ejecutar los scripts SQL:
 psql -U postgres -c "CREATE DATABASE sys_bodega;"
 
 -- Ejecutar schema (tablas y constraints)
-psql -U postgres -d sys_bodega -f database/schema.sql
+psql -U postgres -d sys_bodega -f database/dump.sql
 
--- Ejecutar seed (datos de prueba)
-psql -U postgres -d sys_bodega -f database/seed.sql
+
 ```
 
 ### 2. Configuración
